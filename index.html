@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -89,7 +89,7 @@
         h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; text-transform: capitalize;}
         h2 { font-size: 1.5rem; font-weight: 700;}
 
-        /* --- Profile Card with Background Image --- */
+        /* --- Profile Card --- */
         .card-profile {
             grid-area: profile;
             justify-content: space-between;
@@ -99,15 +99,8 @@
             background-position: center;
             border: none;
         }
-
-        .card-profile h1, 
-        .card-profile h2, 
-        .card-profile .text-secondary { 
-            color: #ffffff; 
-        }
-        .card-profile .text-accent { 
-            color: #80d8ff; 
-        }
+        .card-profile h1, .card-profile h2, .card-profile .text-secondary { color: #ffffff; }
+        .card-profile .text-accent { color: #80d8ff; }
 
         .social-links { display: flex; gap: 12px; margin-top: 24px; }
         .social-pill {
@@ -130,7 +123,146 @@
             background: linear-gradient(135deg, #ffffff 0%, #f0faff 100%);
             justify-content: center; align-items: center; text-align: center;
         }
-        
         .card-tech { grid-area: tech; }
         .tech-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
-        .tech-item { background:
+        .tech-item { background: var(--color-bg-main); padding: 6px 12px; border-radius: var(--border-radius-inner); font-size: 0.85rem; font-weight: 500; }
+        .card-hobby { grid-area: hobby; justify-content: center; align-items: center; text-align: center; background-color: var(--color-accent); color: white; }
+        .card-hobby .text-secondary { color: rgba(255,255,255,0.8); }
+        .card-reflection { grid-area: reflection; background-color: var(--color-bg-main); border-color: transparent; }
+
+        /* --- Updated Case Card with Button Column --- */
+        .card-case {
+            grid-area: case;
+            background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: center;
+            height: 100%;
+        }
+
+        .case-content { 
+            background: rgba(255,255,255,0.95); 
+            padding: 20px; 
+            border-radius: var(--border-radius-inner); 
+        }
+
+        /* The "Try My Lab Timer App" Button Styling */
+        .btn-app {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 50px; /* Rounded pill shape */
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 91, 150, 0.3);
+            white-space: nowrap;
+        }
+
+        .btn-app:hover {
+            background-color: #004471;
+            transform: translateY(-3px); /* Subtle lift */
+            box-shadow: 0 8px 20px rgba(0, 91, 150, 0.4);
+        }
+
+        .card-playlist { grid-area: playlist; }
+        .music-container { width: 100%; height: 100%; display: flex; flex-direction: column; gap: 10px; }
+        iframe { border-radius: 12px; border: none; width: 100%; height: 80px; }
+
+        @media (max-width: 899px) {
+            .card-profile { min-height: auto; gap: 24px; }
+            iframe { height: 152px; }
+            /* Stack button vertically on small screens */
+            .case-grid { grid-template-columns: 1fr; }
+            .btn-app { text-align: center; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="bento-grid">
+
+            <section class="bento-card card-profile">
+                <div class="profile-header">
+                    <p class="text-accent">Student Profile</p>
+                    <h1>nurina</h1>
+                    <h2>B.Sc. Food Science</h2>
+                    <p class="text-secondary" style="margin-top: 8px;">Year 1 Undergraduate Student</p>
+                </div>
+                <div>
+                    <p class="text-secondary" style="font-size: 1.1rem; font-weight: 500;">Innovating food safety.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-pill">LinkedIn</a>
+                        <a href="https://nurina16.github.io/" target="_blank" class="social-pill">Github</a>
+                        <a href="#" target="_blank" class="social-pill">UMT Portal</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bento-card card-location">
+                <div>
+                    <p class="text-secondary">Campus</p>
+                    <h3 class="card-title" style="margin-bottom: 4px;">UMT</h3>
+                    <p class="text-secondary">Kuala Nerus</p>
+                </div>
+                <div style="font-size: 1.5rem; font-weight: 700; margin-top: 8px;">
+                    15:00 <span class="text-accent">MYT</span>
+                </div>
+            </section>
+
+            <section class="bento-card card-tech">
+                <h3 class="card-title">Current Subjects</h3>
+                <ul class="tech-list">
+                    <li class="tech-item">Food Chemistry</li>
+                    <li class="tech-item">Microbiology</li>
+                    <li class="tech-item">Excel</li>
+                    <li class="tech-item">Lab Analysis</li>
+                </ul>
+            </section>
+
+            <section class="bento-card card-hobby">
+                <div>
+                    <h3 class="card-title" style="color: white; margin-bottom: 8px;">Evening walks</h3>
+                    <p class="text-secondary">at Pantai UMT</p>
+                </div>
+            </section>
+
+            <section class="bento-card card-reflection">
+                <h3 class="card-title" style="font-size: 1.1rem;">Why Food Tech Matters in Malaysia</h3>
+                <p class="text-secondary">Sustainable food security is crucial for our future. By optimizing local processing methods, we can reduce waste and improve nutrition.</p>
+            </section>
+
+            <section class="bento-card card-case">
+                 <div class="case-grid">
+                    <div class="case-content">
+                        <p class="text-accent" style="font-size: 0.85rem; margin-bottom: 8px;">Latest Lab Experiment</p>
+                        <h3 class="card-title" style="font-size: 1.4rem;">Starch Gelatinization in Local Kuih.</h3>
+                        <p class="text-secondary">Analyzing texture profiles of Kuih Lapis using texture analyzers to understand consumer acceptance.</p>
+                     </div>
+                     <div class="case-action">
+                        <a href="https://github.com/nurina16/lab-timer-app/app.html" class="btn-app">Try My Lab Timer App</a>
+                     </div>
+                 </div>
+            </section>
+
+            <section class="bento-card card-playlist">
+                <div class="music-container">
+                    <p class="text-accent" style="font-size: 0.85rem;">Focus Playlist</p>
+                    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRvui9Df7X?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <p class="text-secondary" style="font-size: 0.75rem;">Deep focus for lab reports...</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

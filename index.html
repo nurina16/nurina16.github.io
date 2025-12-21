@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -94,21 +94,19 @@
             grid-area: profile;
             justify-content: space-between;
             min-height: 320px;
-            /* Background implementation */
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('bg.jpg');
             background-size: cover;
             background-position: center;
             border: none;
         }
 
-        /* Adjusting text for readability over the image */
         .card-profile h1, 
         .card-profile h2, 
         .card-profile .text-secondary { 
             color: #ffffff; 
         }
         .card-profile .text-accent { 
-            color: #80d8ff; /* Lighter cyan-blue to pop against dark overlay */
+            color: #80d8ff; 
         }
 
         .social-links { display: flex; gap: 12px; margin-top: 24px; }
@@ -135,111 +133,4 @@
         
         .card-tech { grid-area: tech; }
         .tech-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
-        .tech-item { background: var(--color-bg-main); padding: 6px 12px; border-radius: var(--border-radius-inner); font-size: 0.85rem; font-weight: 500; }
-
-        .card-hobby {
-            grid-area: hobby;
-            justify-content: center; align-items: center; text-align: center;
-            background-color: var(--color-accent); color: white;
-        }
-        .card-hobby .text-secondary { color: rgba(255,255,255,0.8); }
-
-        .card-reflection {
-            grid-area: reflection;
-            background-color: var(--color-bg-main); 
-            border-color: transparent; 
-        }
-
-        .card-case {
-            grid-area: case;
-            background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        .case-content { background: rgba(255,255,255,0.95); padding: 20px; border-radius: var(--border-radius-inner); height: 100%; }
-
-        .card-playlist { grid-area: playlist; }
-        .music-container { width: 100%; height: 100%; display: flex; flex-direction: column; gap: 10px; }
-        iframe { border-radius: 12px; border: none; width: 100%; height: 80px; }
-
-        @media (max-width: 899px) {
-            .card-profile { min-height: auto; gap: 24px; }
-            iframe { height: 152px; }
-        }
-    </style>
-</head>
-<body>
-
-    <main>
-        <div class="bento-grid">
-
-            <section class="bento-card card-profile">
-                <div class="profile-header">
-                    <p class="text-accent">Student Profile</p>
-                    <h1>nurina</h1>
-                    <h2>B.Sc. Food Science</h2>
-                    <p class="text-secondary" style="margin-top: 8px;">Year 1 Undergraduate Student</p>
-                </div>
-                <div>
-                    <p class="text-secondary" style="font-size: 1.1rem; font-weight: 500;">Innovating food safety.</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank" class="social-pill">LinkedIn</a>
-                        <a href="https://nurina16.github.io/" target="_blank" class="social-pill">Github</a>
-                        <a href="#" target="_blank" class="social-pill">UMT Portal</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bento-card card-location">
-                <div>
-                    <p class="text-secondary">Campus</p>
-                    <h3 class="card-title" style="margin-bottom: 4px;">UMT</h3>
-                    <p class="text-secondary">Kuala Nerus</p>
-                </div>
-                <div style="font-size: 1.5rem; font-weight: 700; margin-top: 8px;">
-                    15:00 <span class="text-accent">MYT</span>
-                </div>
-            </section>
-
-            <section class="bento-card card-tech">
-                <h3 class="card-title">Current Subjects</h3>
-                <ul class="tech-list">
-                    <li class="tech-item">Food Chemistry</li>
-                    <li class="tech-item">Microbiology</li>
-                    <li class="tech-item">Excel</li>
-                    <li class="tech-item">Lab Analysis</li>
-                </ul>
-            </section>
-
-            <section class="bento-card card-hobby">
-                <div>
-                    <h3 class="card-title" style="color: white; margin-bottom: 8px;">Evening walks</h3>
-                    <p class="text-secondary">at Pantai UMT</p>
-                </div>
-            </section>
-
-            <section class="bento-card card-reflection">
-                <h3 class="card-title" style="font-size: 1.1rem;">Why Food Tech Matters in Malaysia</h3>
-                <p class="text-secondary">Sustainable food security is crucial for our future. By optimizing local processing methods, we can reduce waste and improve nutrition.</p>
-            </section>
-
-            <section class="bento-card card-case">
-                 <div class="case-content">
-                    <p class="text-accent" style="font-size: 0.85rem; margin-bottom: 8px;">Latest Lab Experiment</p>
-                    <h3 class="card-title" style="font-size: 1.4rem;">Starch Gelatinization in Local Kuih.</h3>
-                    <p class="text-secondary">Analyzing texture profiles of Kuih Lapis using texture analyzers to understand consumer acceptance.</p>
-                 </div>
-            </section>
-
-            <section class="bento-card card-playlist">
-                <div class="music-container">
-                    <p class="text-accent" style="font-size: 0.85rem;">Focus Playlist</p>
-                    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRvui9Df7X?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <p class="text-secondary" style="font-size: 0.75rem;">Deep focus for lab reports...</p>
-                </div>
-            </section>
-
-        </div>
-    </main>
-
-</body>
-</html>
+        .tech-item { background:
